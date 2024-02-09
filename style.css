@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;800&family=Merriweather:wght@300;400;700;900&family=Shadows+Into+Light&display=swap');
+* {
+    margin: 0;
+    user-select: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: "Cairo" , sans-serif;
+    scroll-behavior: smooth;
+}
+:root {
+    --mainColor: rgb(180, 211, 47);
+    --lightgray : gray ;
+    --white : white ;
+    --box-shadw : 0  1rem  1rem rgba(0 ,0 ,0 ,.7);
+}
+
+header {
+    box-shadow: var(--box-shadw);
+    position: fixed;
+    height: 8vh;
+    display: flex;
+    /* text-align: center; */
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+}
+.left h2 {
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    margin-left: 10vh;
+
+}
+.left i {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    font-size: 2rem;
+    color: var(--mainColor);
+}
+.mid a {
+    font-size: 1.2em;
+    position: relative;
+    margin-right: 2em;
+    color: black;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+
+}
+/* .mid a:hover {
+    font-weight: 600;
+    border-radius: 10px;
+
+} */
+.mid a::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    background-color: var(--mainColor);
+    height: 3px;
+    border-radius: 2px;
+    left: 0;
+    bottom: 0;
+    transition: width .5s ease-out;
+}
+.mid a:hover::after {
+    width: 100%;
+
+}
+
+.right {
+    margin-right: 10vh ;
+}
+.right i {
+    color: var(--white);
+    padding: .6rem;
+    border-radius: 10px;
+    margin-right: 2vh;
+    background-color: var(--lightgray);
+    transition: all .5s ease;
+}
+.right i:hover{
+    /* margin-bottom: .5em; */
+    cursor: pointer;
+    background-color: var(--mainColor);
+    transform: scale(1.1);
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.page1 {
+    background: url(peakpx.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 61em;
+    display: flex;
+    align-items: center;
+}
+.page1 .content {
+    margin-left: 10vh;
+    flex-direction: column;
+    margin-top: 10vb;
+    text-align: center;
+}
+.page1 .content h1 {
+    color: var(--white);
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+.page1 .content h1 span {
+    color: var(--mainColor);
+}
+.page1 .content p {
+    color: var(--white);
+    font-size: 1.3em;
+}
+.page1 .content button {
+    background-color: transparent;
+    border: 2px solid;
+    color: var(--white);
+    font-size: 1.6em;
+    margin-top: 7vb;
+    border-radius: 10px;
+    padding: .3em 1em;
+    transition: all .5s ease;
+}
+.page1 .content button:hover {
+    color: var(--white);
+    background-color:var(--mainColor);
+    box-shadow: 0  0 30px var(--white);
+}
+.page2 {
+    position: absolute;
+    /* background: rgb(172, 172, 172); */
+    text-align: center;
+    width: 100%;
+    height: 50em;
+}
+.page2 h1 {
+    margin-top: 6vb;
+    letter-spacing: 1px;
+}
+.page2 h1 span {
+    border-radius: 10px;
+    padding: .1rem .4rem;
+    color: white;
+    background-color: var(--mainColor);
+    box-shadow: 0  0 10px black;
+}
+.page2 .cards {
+    margin-top: 10vb;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.page2 .cards .card {
+    padding: 2em;
+    border-radius: 5px;
+    outline: 1px solid black;
+    text-align: center;
+    width: 50vh;
+    min-height: 500px;
+    transition: all .5s ease;
+    box-shadow: 0  0 40px black;
+ 
+}
+
+.page2 .cards .card:hover {
+    z-index: 999;
+    background-color: white;
+    transform: scale(1.1);
+}
+.page2 .cards .card:hover img {
+    transform: scale(1.1);
+
+}
+.page2 .cards .card h3 {
+    font-size: 2em;
+}
+.page2 .cards .card p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.page2 .cards .card .btn {
+    border-radius: 5px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    padding: .3em .4em;
+    outline: 1px solid black;
+    color: black;
+    transition: all .3s ease-in-out;
+}
+.page2 .cards .card .btn:hover {
+    box-shadow: 1px 1px 10px 1px black;
+    background-color: var(--mainColor);
+
+}
+
+.page2 .cards .card img {
+    width: 260px; 
+    height: auto;  
+    transition: all .5s ease;
+
+}
+
+
